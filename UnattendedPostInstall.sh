@@ -76,7 +76,6 @@ main() {
       msg_error "Unsupported Proxmox 8 version"
       exit 1
     fi
-    ge8
   elif [[ "$PVE_MAJOR" == "9" ]]; then
     if ((PVE_MINOR < 0 || PVE_MINOR > 1)); then
       msg_error "Only Proxmox 9.0-9.1.x is currently supported"
