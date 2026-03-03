@@ -213,20 +213,16 @@ EOF
       ;;
     esac
   else
-CHOICE="yes"
-      msg_info "Adding 'pve-enterprise' repository (deb822)"
-      cat >/etc/apt/sources.list.d/pve-enterprise.sources <<EOF
+  msg_info "Adding 'pve-enterprise' repository (deb822)"
+  cat >/etc/apt/sources.list.d/pve-enterprise.sources <<EOF
 Types: deb
 URIs: https://enterprise.proxmox.com/debian/pve
 Suites: trixie
 Components: pve-enterprise
 Signed-By: /usr/share/keyrings/proxmox-archive-keyring.gpg
 EOF
-      msg_ok "Added 'pve-enterprise' repository"
-      
-    no) msg_error "Selected no to Adding 'pve-enterprise' repository" ;;
-    esac
-  fi
+  msg_ok "Added 'pve-enterprise' repository"
+fi
 
   # ---- CEPH-ENTERPRISE ----
   if grep -q "enterprise.proxmox.com.*ceph" /etc/apt/sources.list.d/*.sources 2>/dev/null; then
