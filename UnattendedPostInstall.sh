@@ -213,15 +213,7 @@ EOF
       ;;
     esac
   else
-    CHOICE=$(whiptail --backtitle "Proxmox VE Helper Scripts" \
-      --title "PVE-ENTERPRISE" \
-      --menu "The 'pve-enterprise' repository is only available to users who have purchased a Proxmox VE subscription.\n\nAdd 'pve-enterprise' repository (deb822)?" 14 58 2 \
-      "no" " " \
-      "yes" " " \
-      --default-item "no" \
-      3>&2 2>&1 1>&3)
-    case $CHOICE in
-    yes)
+CHOICE="yes"
       msg_info "Adding 'pve-enterprise' repository (deb822)"
       cat >/etc/apt/sources.list.d/pve-enterprise.sources <<EOF
 Types: deb
