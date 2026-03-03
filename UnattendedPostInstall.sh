@@ -223,7 +223,7 @@ Components: pve-enterprise
 Signed-By: /usr/share/keyrings/proxmox-archive-keyring.gpg
 EOF
       msg_ok "Added 'pve-enterprise' repository"
-      ;;
+      
     no) msg_error "Selected no to Adding 'pve-enterprise' repository" ;;
     esac
   fi
