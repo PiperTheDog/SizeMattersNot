@@ -314,6 +314,7 @@ fi
       msg_ok "Deleted 'pve-no-subscription' repository file"
       ;;
     esac
+  fi
   # Instead of the whiptail block, just run the commands directly:
 msg_info "Adding 'pve-no-subscription' repository (deb822)"
 cat >/etc/apt/sources.list.d/proxmox.sources <<EOF
