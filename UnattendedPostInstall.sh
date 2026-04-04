@@ -314,26 +314,16 @@ fi
       msg_ok "Deleted 'pve-no-subscription' repository file"
       ;;
     esac
-  else
-    CHOICE=$(whiptail --backtitle "Proxmox VE Helper Scripts" --title "PVE-NO-SUBSCRIPTION" \
-      --menu "The 'pve-no-subscription' repository provides access to all of the open-source components of Proxmox VE.\n\nAdd 'pve-no-subscription' repository (deb822)?" 14 58 2 \
-      "yes" " " \
-      "no" " " 3>&2 2>&1 1>&3)
-    case $CHOICE in
-    yes)
-      msg_info "Adding 'pve-no-subscription' repository (deb822)"
-      cat >/etc/apt/sources.list.d/proxmox.sources <<EOF
+  # Instead of the whiptail block, just run the commands directly:
+msg_info "Adding 'pve-no-subscription' repository (deb822)"
+cat >/etc/apt/sources.list.d/proxmox.sources <<EOF
 Types: deb
 URIs: http://download.proxmox.com/debian/pve
 Suites: trixie
 Components: pve-no-subscription
 Signed-By: /usr/share/keyrings/proxmox-archive-keyring.gpg
 EOF
-      msg_ok "Added 'pve-no-subscription' repository"
-      ;;
-    no) msg_error "Selected no to Adding 'pve-no-subscription' repository" ;;
-    esac
-  fi
+msg_ok "Added 'pve-no-subscription' repository"
 
   # ---- CEPH ----
   if component_exists_in_sources "no-subscription"; then
