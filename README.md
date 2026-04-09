@@ -36,7 +36,19 @@ How To create a proxmox cluster:
 
    
 
+How to Run the Playbook
+Download and Prepare: Download the ZIP file from the GitHub repository. Extract the contents and navigate to the folder using your terminal (I recommend the integrated terminal in VS Code).
 
-How to run the Playbook: 
+Configure Environment Variables:
+Open the following files in your code editor and update the placeholders:
 
-1. Download the playbook as well as the inventory.ini file from this github and put them in the same location 
+a. Inventory.ini: Replace the placeholder hostnames/IPs with the addresses of your Proxmox nodes.
+
+b. playbook.yaml (Hosts): Update the hosts and node_name variables to match your cluster configuration.
+
+c. Credentials: Replace the placeholder passwords and usernames.
+
+3. Once everything is updated to reflect your personal config simply run the following command:
+   ansible-playbook -i Inventory.ini playbook.yaml
+
+   
