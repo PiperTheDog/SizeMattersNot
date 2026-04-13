@@ -53,4 +53,8 @@ c. Credentials: Replace the placeholder passwords and usernames.
 3. Once everything is updated to reflect your personal config simply run the following command:
    ansible-playbook -i Inventory.ini playbook.yaml
 
+### To login to the VM's that the playbook created use the following login: 
+
+Username: Owen 
+Password: P@ssw0rd
    
