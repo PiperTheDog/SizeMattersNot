@@ -1,4 +1,4 @@
-This project is designed to provide students in the ICT program/Any IT related program an easy template for deploying a full ADDS lab on minimal/low powered hardware: 
+### This project is designed to provide students in the ICT program/Any IT related program an easy template for deploying a full ADDS lab on minimal/low powered hardware: 
 
 The current proof-of-concept is demonstrated on three nodes:
 
@@ -16,9 +16,11 @@ Pre Requsets:
 
 1. 2(or 3)Proxmox nodes with necessary configs ie: ethernet, etc.
 
-2. A third device such as a raspberry pi to maintain quorum - You can install corosync-qnetd and configure it however this specific build relies on having 3 full proxmox nodes available
+2. It is important that one node has a minimum of 24GB of ram - The CPU Specs are not important as long 
 
-3. Download the modified Windows ISO files from the following site onto the dedicated nodes local storage:
+3. A third device such as a raspberry pi to maintain quorum - You can install corosync-qnetd and configure it however this specific build relies on having 3 full proxmox nodes available
+
+4. Download the modified Windows ISO files from the following site onto the dedicated nodes local storage:
    iso.spinks.ca
 
 How To create a proxmox cluster: 
