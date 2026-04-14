@@ -14,7 +14,7 @@ Node 3: Custom NAS (AMD Ryzen 5 4600G) with 16GB RAM – Used for maintaining qu
 
 ### Note: This build is highly accessible. It can be replicated using 2–3 Lenovo Tiny units (widely available on the used market due to Windows 10's end-of-life) and a Raspberry Pi to maintain quorum.
 
-This build is possible with 2 - 3 Lenovo Tiny's and a raspberry pi to maintain quorum, the Lenovo Tiny's are redally available on the used market as well as Ebay due to the recent discontinuation of windows 10
+Lenovo Tiny PC's using 7th gen CPU's are readily avialable on the Used Market due to the recent discontinuation of windows 10 which has required many buisnesses to upgrade and replace fleets of machines. 
 
 ### Pre Requsets: 
 
