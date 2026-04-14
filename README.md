@@ -25,8 +25,10 @@ Lenovo Tiny PC's using 7th gen CPU's are readily avialable on the Used Market du
 3. A third device such as a raspberry pi to maintain quorum - You can install corosync-qnetd and configure it however this demo asumes that you have 3 nodes available
    
 5. Download the modified Windows ISO files from the following site onto the dedicated nodes local storage:
+
+   - iso.spinks.ca
+   
    - These ISO files have been modified to skip the OOBE Expierence saving time allowing you to skip straight to the configuration of your domain.
-   iso.spinks.ca
 
 ### How To create a proxmox cluster: 
 
