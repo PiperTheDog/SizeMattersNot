@@ -1,4 +1,8 @@
-### This project is designed to provide students in the ICT program/Any IT related program an easy template for deploying a full ADDS lab on minimal/low powered hardware: 
+# Size Matters Not: Automated Proxmox AD Lab
+
+This proof of concept is designed to provide IT students with a Template they can follow to deploy a Multi Node Proxmox cluster. The only requirement is that at least ONE node have 24GB of ram as Ram is the biggest bottleneck in virtualization - CPU Doesn't matter as much as the template utilizes CPU Over Allocation, 
+
+# $\color{red}{\text{CRITICAL:}}$ Review ALL scripts before running as it is dangerous to run scripts downloaded from the internet
 
 The current proof-of-concept is demonstrated on three nodes:
 
