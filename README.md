@@ -12,23 +12,23 @@ Node 2: Headless Laptop (AMD Ryzen 7 PRO 5850U) with 32GB RAM.
 
 Node 3: Custom NAS (AMD Ryzen 5 4600G) with 16GB RAM – Used for maintaining quorum and hosting ISO files.
 
-Note: This build is highly accessible. It can be replicated using 2–3 Lenovo Tiny units (widely available on the used market due to Windows 10's end-of-life) and a Raspberry Pi to maintain quorum.
+### Note: This build is highly accessible. It can be replicated using 2–3 Lenovo Tiny units (widely available on the used market due to Windows 10's end-of-life) and a Raspberry Pi to maintain quorum.
 
 This build is possible with 2 - 3 Lenovo Tiny's and a raspberry pi to maintain quorum, the Lenovo Tiny's are redally available on the used market as well as Ebay due to the recent discontinuation of windows 10
 
-Pre Requsets: 
+### Pre Requsets: 
 
 1. 2(or 3)Proxmox nodes with necessary configs ie: ethernet, etc.
 
-2. It is important that one node has a minimum of 24GB of ram - The CPU Specs are not important as long 
+2. Memory: At Least one node must have 24GB of ram to handle the deployment of the DC, Utility server and the Workstation
 
-3. A third device such as a raspberry pi to maintain quorum - You can install corosync-qnetd and configure it however this specific build relies on having 3 full proxmox nodes available
-
-4. Download the modified Windows ISO files from the following site onto the dedicated nodes local storage:
+3. A third device such as a raspberry pi to maintain quorum - You can install corosync-qnetd and configure it however this demo asumes that you have 3 nodes available
+   
+5. Download the modified Windows ISO files from the following site onto the dedicated nodes local storage:
+   - These ISO files have been modified to skip the OOBE Expierence saving time allowing you to skip straight to the configuration of your domain.
    iso.spinks.ca
 
-How To create a proxmox cluster: 
-
+### How To create a proxmox cluster: 
 
 1. From whichever proxmox node is going to be your inital node(it does not matter) click on data center:
 <img width="959" height="701" alt="Screenshot 2026-04-08 at 3 58 10 PM" src="https://github.com/user-attachments/assets/f9fb13c6-f4e8-4037-b1c1-ca10c8750346" />
@@ -42,17 +42,17 @@ How To create a proxmox cluster:
 
    
 
-How to Run the Playbook
-Download and Prepare: Download the ZIP file from the GitHub repository. Extract the contents and navigate to the folder using your terminal (I recommend the integrated terminal in VS Code).
+### How to Run the Playbook
 
-Configure Environment Variables:
-Open the following files in your code editor and update the placeholders:
+1. Download and Prepare: Download the ZIP file from the GitHub repository. Extract the contents and navigate to the folder using your terminal (I recommend the integrated terminal in VS Code).
 
-a. Inventory.ini: Replace the placeholder hostnames/IPs with the addresses of your Proxmox nodes.
+2. Configure Environment Variables: Open the following files in your code editor and update the commented place holders with your own information
 
-b. playbook.yaml (Hosts): Update the hosts and node_name variables to match your cluster configuration.
+   a. Inventory.ini: Replace the placeholder hostnames/IPs with the addresses of your Proxmox nodes.
 
-c. Credentials: Replace the placeholder passwords and usernames.
+   b. playbook.yaml (Hosts): Update the hosts and node_name variables to match your cluster configuration.
+
+   c. Credentials: Replace the placeholder passwords and usernames.
 
 3. Once everything is updated to reflect your personal config simply run the following command:
    ansible-playbook -i Inventory.ini playbook.yaml
@@ -61,4 +61,6 @@ c. Credentials: Replace the placeholder passwords and usernames.
 
 Username: Owen 
 Password: P@ssw0rd
+
+### Any Issues just open a GitHub Request Request and i'll take a look
    
